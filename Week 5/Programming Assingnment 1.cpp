@@ -1,3 +1,27 @@
+Recall that a tree is a graph that has no cycles, and a rooted tree is a tree in which one vertex has been designated the root. For this problem, assume that the edges of the trees are oriented away from the root, for example, if the edges are (r,u), (r,v), and (r,w), where r is the root, then the edges are from r to u, r to v and r to w, respectively. 
+
+In a rooted tree, the parent of a vertex v is the vertex connected directly to v on the path to the root; every vertex has a unique parent except the root which has no parent. A child of a vertex v is a vertex of which v is the parent. An ascendant of a vertex v is any vertex which is either the parent of v or is (recursively) the ascendant of the parent of v. 
+
+
+You are given a collection of directed rooted trees T1,T2,…,Tr as input.
+
+You have to partition the vertices of these trees into some number of groups such that no group contains two vertices such that one is an ascendant of another. In other words, every group should have the property that it does not contain a pair of vertices u and v such that u is an ascendant of v. Your task is to return the minimum number of groups you need to form to respect this constraint.
+
+
+Input Format
+
+The first line contains integer n (1 ≤ n ≤ 2000) — the total number of vertices.
+
+The next n lines contain the integers pi (1 ≤ pi ≤ n or pi = -1). Every pi denotes the immediate parent for the i-th node. If pi is -1, that means that the i-th node is a root node.
+
+It is guaranteed that pi ≠ i, that is there are no loops. Also, there are no cycles.
+
+Output Format
+
+Print a single integer denoting the minimum number of groups that will be formed in the party.
+
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
